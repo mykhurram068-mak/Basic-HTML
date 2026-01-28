@@ -1,0 +1,139 @@
+ /* =====================
+       CSS VARIABLES (THEME)
+    ====================== */
+    :root {
+      --primary: #2563eb;
+      --secondary: #1e293b;
+      --background: #f8fafc;
+      --surface: #ffffff;
+      --text: #0f172a;
+      --muted: #64748b;
+      --radius: 8px;
+    }
+
+    /* =====================
+       RESET
+    ====================== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, sans-serif;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* =====================
+       HEADER + NAV
+    ====================== */
+    header {
+      background: var(--secondary);
+      color: white;
+      padding: 1rem;
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .logo {
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+
+    nav a {
+      padding: 0.5rem 0.8rem;
+      border-radius: var(--radius);
+    }
+
+    nav a:hover {
+      background: var(--primary);
+    }
+
+    /* =====================
+       MOBILE MENU
+    ====================== */
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        width: 100%;
+        margin-top: 1rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+      }
+
+      nav.show {
+        display: block;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+
+    /* =====================
+       MAIN LAYOUT
+    ====================== */
+    main {
+      max-width: 1200px;
+      margin: auto;
+      padding: 1.5rem;
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    section,
+    aside {
+      background: var(--surface);
+      padding: 1.5rem;
+      border-radius: var(--radius);
+    }
+
+    .content-grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .content-grid {
+        grid-template-columns: 3fr 1fr;
+      }
+    }
+
+    /* =====================
+       FOOTER
+    ====================== */
+    footer {
+      background: var(--secondary);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }

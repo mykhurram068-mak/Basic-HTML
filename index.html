@@ -3,149 +3,71 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Base Responsive Website</title>
+  <title>Reusable Website Structure</title>
 
-  <style>
-    /* ===== CSS RESET ===== */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
-      background-color: #f4f4f4;
-      color: #333;
-    }
-
-    /* ===== LAYOUT ===== */
-    header {
-      background: #222;
-      color: #fff;
-      padding: 1rem;
-    }
-
-    header h1 {
-      font-size: 1.5rem;
-    }
-
-    nav {
-      background: #333;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    nav ul li {
-      margin: 0.5rem;
-    }
-
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      padding: 0.5rem 1rem;
-      display: block;
-    }
-
-    nav ul li a:hover {
-      background: #555;
-      border-radius: 4px;
-    }
-
-    main {
-      display: flex;
-      flex-direction: column;
-      padding: 1rem;
-      gap: 1rem;
-    }
-
-    section {
-      background: #fff;
-      padding: 1rem;
-      border-radius: 6px;
-    }
-
-    aside {
-      background: #eaeaea;
-      padding: 1rem;
-      border-radius: 6px;
-    }
-
-    footer {
-      background: #222;
-      color: #fff;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 1rem;
-    }
-
-    /* ===== RESPONSIVE LAYOUT ===== */
-    @media (min-width: 720px) {
-      main {
-        flex-direction: row;
-      }
-
-      section {
-        flex: 3;
-      }
-
-      aside {
-        flex: 1;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- ===== HEADER ===== -->
+  <!-- HEADER -->
   <header>
-    <h1>My Website</h1>
-    <p>Reusable Responsive HTML Structure</p>
+    <div class="header-container">
+      <div class="logo">MyBrand</div>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <nav id="navMenu">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- ===== NAVIGATION ===== -->
-  <nav>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- ===== MAIN CONTENT ===== -->
+  <!-- MAIN -->
   <main>
 
-    <!-- MAIN SECTION -->
+    <!-- HERO -->
     <section>
-      <h2>Main Content Area</h2>
-      <p>
-        This is the main section where your page content will go.
-        Replace this with text, images, forms, cards, or anything else.
-      </p>
+      <h1>Reusable Responsive Website</h1>
+      <p>This hero section works for any category.</p>
     </section>
 
-    <!-- SIDEBAR -->
-    <aside>
-      <h3>Sidebar</h3>
-      <p>
-        Use this area for ads, links, categories, or extra info.
-      </p>
-    </aside>
+    <!-- CONTENT + SIDEBAR -->
+    <div class="content-grid">
+
+      <section>
+        <h2>Main Section</h2>
+        <p>
+          This is where your main content lives.
+          Replace this text for any website category.
+        </p>
+      </section>
+
+      <aside>
+        <h3>Sidebar</h3>
+        <p>Links, ads, info, or widgets.</p>
+      </aside>
+
+    </div>
+
+    <!-- EXTRA SECTION -->
+    <section>
+      <h2>Additional Section</h2>
+      <p>Testimonials, features, cards, or blog previews.</p>
+    </section>
 
   </main>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2026 | MAK-IT</p>
+    <p>© 2026 MAK-IT. All rights reserved.</p>
   </footer>
+
+  <!-- JS -->
+  <script src="script.js"></script>
 
 </body>
 </html>
